@@ -1,365 +1,250 @@
-// Теория
-
-// if(логическое выражение) {
-//     Этот код выполнится,
-//     если логическое выражение верно (то есть равно true)
-// } else {
-//     Этот код выполнится,
-//     если логическое выражение неверно ( то есть равно false)
+//Теория
+// while (пока выражение истинно) {
+//     выполняем этот код циклически;
+//     в начале каждого цикла проверяем выражение в круглых скобках
 // }
 
-// var a = 3;
-// if (a > 0) {
-//   alert("Верно!");
-// } else {
-//   alert("Неверно!");
+// var i = 0;
+// while (i < 5) {
+//   i++;
+//   alert(i);
 // }
 
-// var a = -3;
-// if (a > 0) {
-//   alert("Верно!");
-// } else {
-//   alert("Неверно!");
+// for(начальные команды; условие окончания цикла; команды после прохода цикла){
+//     тело цикла;
 // }
 
-// if (a == 0) {
-//   alert("Верно!");
-// } else {
-//   alert("Неверно!");
+// for (var i = 0; i < 10; i++) {
+//   alert(i);
 // }
 
-// Один знак = - это присваивание,а два знака == это сравнение равно ли
-// var a = 0;
-// if (a == 0) alert("Верно!");
-// else alert("Неверно");
+// Цикл без тела(т.к. в конце тела точка с запятой)
+// for (var i = 0; i < 10; i++);
+// alert(i);
 
-// здесь в случае если удалось присвоить единицу к переменной а, то значит true, иначе false
-// var a = 0;
-// if ((a = 1)) alert("Верно!");
-// else alert("Неверно");
+// for (var i = 0, j = 2; i < 10; i++, j++, i = i + j) {}
 
-// Выведет верно т.к. два равно == сравнивает только по значению
-// var a = "0";
-// if (a == 0) alert("Верно");
-// else alert("Неверно");
+// var arr = [1, 2, 3, 4, 5];
+// for (var i = 0; i <= arr.length - 1; i++) {
+//   alert(arr[i]);
+// }
 
-// Выведет неверно т.к. три равно === сравнивает по значению и по типу
-// var a = "0";
-// if (a === 0) alert("Верно");
-// else alert("Неверно");
+// var arr = [1, 2, 3, 4, 5];
+// for (var i = 0; i < arr.length; i++) {
+//   alert(arr[i]);
+// }
 
-// Не равно != - игнорирует различие в типах, Не равно !== не игнорирует разиличие в типах
-// var a = 0;
-// if (a != 0) alert("Верно");
-// else alert("Неверно");
+//Выведет ключи
+// var obj = { Коля: 200, Вася: 300, Петя: 400 };
+// for (key in obj) {
+//   alert(key);
+// }
 
-// a = 1;
-// if (a != 0) alert("Верно");
-// else alert("Неверно");
+//Выведет значения
+// var obj = { Коля: 200, Вася: 300, Петя: 400 };
+// for (key in obj) {
+//   alert(obj[key]);
+// }
 
-// var a = "0";
-// if (a != 0) alert("Верно");
-// else alert("Неверно");
-
-// Будет верно т.к. разные типы
-// var a = "0";
-// if (a !== 0) alert("Верно");
-// else alert("Неверно");
-
-// Логическое и &&
-// var a = 3;
-// var b = -3;
-// if (a > 0 && b < 0) alert("Верно");
-// else alert("Неверно");
-
-// var a = 3;
-// if (a >= 1 && a <= 12) alert("Верно");
-// else alert("Неверно");
-
-// Логическое или ||
-// var a = -3;
-// var b = -3;
-// if (a > 0 || b < 0) alert("Верно");
-// else alert("Неверно");
-
-// var a = true;
-// if (a) alert("Верно");
-// else alert("Неверно");
-
-// var a = true;
-// if (!a) alert("Верно");
-// else alert("Неверно");
-
-//Данное выражение всегда выводит верно
-// if (true) alert("Верно");
-// else alert("Неверно");
-
-//Данное выражение всегда будет выводить Неверно
-// if (false) alert("Верно");
-// else alert("Неверно");
-
-// Данное выражение всегда будет выводить неверно
-// if (!true) alert("Верно");
-// else alert("Неверно");
-
-// Данное выражение всегда будет выводить верно
-// if (!false) alert("Верно");
-// else alert("Неверно");
-
-// var a = -1;
-// if (a === undefined) {
-//   alert("Введите a");
-// } else {
-//   if (a > 0) {
-//     alert("Больше нуля");
+// var arr = [1, 2, 3, 4, 5];
+// for (var i = 0; i < arr.length; i++) {
+//   if (arr[i] === 3) {
+//     break;
 //   } else {
-//     alert("Меньше нуля");
+//     alert(arr[i]);
 //   }
 // }
 
-// var a = -1;
-// if (a === undefined) {
-//   alert("Введите а");
-// } else if (a > 0) {
-//   alert("Больше нуля");
-// } else {
-//   alert("Меньше нуля");
-// }
-var lang = "ru";
+// Инструкция continue прерывает выполнение текущей итерации текущего или отмеченного цикла, и продолжает его выполнение на следующей итерации.
 
-// if (lang == "ru") {
-//   alert("Русский текст");
-// } else if (lang == "en") {
-//   alert("Английский текст");
-// } else if (lang == "de") {
-//   alert("Немецкий текст");
+// i = 0;
+// n = 0;
+// while (i < 5) {
+//   i++;
+//   if (i === 3) {
+//     continue;
+//   }
+//   alert((n += i));
 // }
 
-// if (lang == "ru") {
-//   alert("Русский текст");
-// }
-// if (lang == "en") {
-//   alert("Английский текст");
-// }
-// if (lang == "de") {
-//   alert("Немецкий текст");
+// Практические задачи
+// var i = 1;
+// while (i <= 50) {
+//   document.write(i + "<br>");
+//   i++;
 // }
 
-// switch (перменная){
-//     case: 'значени1':
-//     здесь код, который выполнится в случае, если переменная имеет значение1;
-//     break;
-//     case: 'значени2':
-//     здесь код, который выполнится в случае, если переменная имеет значение2;
-//     break;
-//     case: 'значени3':
-//     здесь код, который выполнится в случае, если переменная имеет значение3;
-//     break;
-//     default:
-//     код выполнится если не совпадет не с одним из значений;
-//     break;
+// for (var i = 1; i <= 50; i++) {
+//   document.write(i + "<br>");
 // }
 
-// var lang = "ru";
-// switch (lang) {
-//   case "ru":
-//     alert("Русский текст");
-//     break;
-
-//   case "en":
-//     alert("Английский текст");
-//     break;
-
-//   case "de":
-//     alert("Немецкий текст");
-//     break;
-
-//   default:
-//     alert("Данный язык не поддерживается");
-//     break;
+// var arr = [1, 2, 3, 4, 5];
+// for (var i = 0; i < arr.length; i++) {
+//   document.write(arr[i] + "<br>");
 // }
 
-// Задача 1
-// var num = 10;
-// if (num == 10) {
-//   alert("Верно");
-// } else {
-//   alert("Неверно");
-// }
-
-// Задача 2
-// var min = 10;
-// if (min >= 0 && min <= 14) {
-//   alert("В первую четверть");
-// }
-// if (min >= 15 && min <= 14) {
-//   alert("В первую четверть");
-// }
-// if (min >= 31 && min <= 45) {
-//   alert("В первую четверть");
-// }
-// if (min >= 46 && min <= 59) {
-//   alert("В первую четверть");
-// }
-
-// Задача 3
-// var lang = "ru";
-// if (lang == "ru") {
-//   var arr = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
-// }
-// if (lang == "en") {
-//   arr = ["mn", "ts", "wd", "th", "fr", "st", "sn"];
-// }
-// alert(arr);
-
-// var lang = "en";
-// switch (lang) {
-//   case "ru":
-//     var arr = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
-//     break;
-
-//   case "en":
-//     arr = ["mn", "ts", "wd", "th", "fr", "st", "sn"];
-//     break;
-// }
-// alert(arr);
-
-// var lang = "en";
-// var arr = {
-//   ru: ["пн", "вт", "ср", "чт", "пт", "сб", "вс"],
-//   en: ["mn", "ts", "wd", "th", "fr", "st", "sn"],
-// };
-// alert(arr[lang]);
-
-// Задача самостоятельные
-// Задача 1
-// var a = -3;
-// if (a == 0) alert("Верно");
-// else alert("Неверно");
-
-// Задача 2
-// var a = -3;
-// if (a > 0) alert("верно");
-// else alert("не верно");
-
-//Задача 3
-// var a = -3;
-// if (a < 0) alert("верно");
-// else alert("не верно");
-
-//Задача 4
-// var a = -3;
-// if (a >= 0) alert("Верно");
-// else alert("Не верно");
-
-//Задача 5
-// var a = 1;
-// if (a <= 0) alert("верно");
-// else alert("не верно");
-
-// Задача 6
-// var a = 0;
-// if (a != 0) alert("Верно");
-// else alert("не верно");
-
-// Задача 7
-// var a = "test";
-// if (a == "test") alert("Верно");
-// else alert("Не верно");
-
-// Задача 8
-// var a = "1";
-// if (a === "1") alert("Верно");
-// else alert("не верно");
-
-// Задача 9
-// var test = false;
-// if (test) alert("верно");
-// else alert("не верно");
-
-//Задача 10
-// var test = false;
-// if (!test) alert("верно");
-// else alert("не верно");
-
-// var test = false;
-// if (test != true) alert("верно");
-// else alert("не верно");
-
-//Задача 11
-// var a = 2;
-// if (a > 0 && a < 5) alert("верно");
-// else alert("не верно");
-
-//Задача 12
-// var a = 2;
-// if (a == 0 || a < 1) alert((a += 7));
-// else alert((a /= 10));
-
-//Задача 13
-// var a = 3,
-//   b = 5;
-// if (a <= 1 && b >= 3) alert(a + b);
-// else alert(a - b);
-
-// Задача 14
-// var a = 1,
-//   b = 7;
-// if ((a > 2 && a < 11) || (b >= 6 && b <= 14)) alert("верно");
-// else alert("Не верно");
-
-// Задача 15
-// var num = 2;
-// switch (num) {
-//   case 1:
-//     var result = "Зима";
-//     break;
-//   case 2:
-//     result = "Весна";
-//     break;
-//   case 3:
-//     result = "Лето";
-//     break;
-//   case 4:
-//     result = "Осень";
-//     break;
-//   default:
-//     break;
+// var result = 1;
+// var arr = [2, 3, 4, 5];
+// for (var i = 0; i < arr.length; i++) {
+//   result = result * arr[i];
 // }
 // alert(result);
 
-//задача 16
-// var day = 41;
-// if (day >= 1 && day <= 10) alert("1 декада месяца");
-// if (day >= 11 && day <= 20) alert("2 декада месяца");
-// if (day >= 21 && day <= 31) alert("3 декада месяца");
+// var result = 1;
+// var arr = [2, 3, 4, 5];
+// for (var i = 0; i < arr.length; i++) {
+//   result *= arr[i];
+// }
+// alert(result);
 
-// задача 17
-// var month = 6;
-// if (month >= 1 && month <= 3) alert("Зима");
-// if (month >= 4 && month <= 6) alert("Весна");
-// if (month >= 7 && month <= 9) alert("Лето");
-// if (month >= 10 && month <= 12) alert("Осень");
+// var obj = {
+//   Минск: "Беларусь",
+//   Москва: "Россия",
+//   Киев: "Украина",
+// };
+// for (var key in obj) {
+//   alert(key + " - это " + obj[key] + ".");
+// }
 
-// Задача 18
-// var str = "abcde";
-// if (str[0] == "a") alert("да");
-// else alert("нет");
+// Практические задачи #1
+// var i = 0;
+// while (i <= 100) {
+//   document.write(i + "<br>");
+//   i++;
+// }
 
-// Задача 19
-// var str = "12345";
-// if (str[0] == 1 || str[0] == 2 || str[0] == 3) alert("Да");
-// else alert("Нет");
+// for (i = 0; i <= 100; i++) {
+//   document.write(i + "<br>");
+// }
 
-// Задача 20
-// var str = "123";
-// alert(Number(str[0]) + Number(str[1]) + Number(str[2]));
+//Задача №2
+// var i = 11;
+// while (i >= 11 && i <= 33) {
+//   document.write(i + "<br>");
+//   i++;
+// }
 
-// Задача 21
-// var str = "123321";
-// if (
-//   Number(str[0]) + Number(str[1]) + Number(str[2]) ==
-//   Number(str[3]) + Number(str[4]) + Number(str[5])
-// )
-//   alert("да");
-// else alert("Нет");
+// for (i = 11; i >= 11 && i <= 33; i++) {
+//   document.write(i + "<br>");
+// }
+
+//Задача №3
+// var i = 0;
+// while (i >= 0 && i <= 100) {
+//   if (i % 2 == 0 && i != 0) {
+//     document.write(i + "<br>");
+//   }
+//   i++;
+// }
+
+// for (i = 0; i <= 100; i++) {
+//   if (i % 2 == 0 && i != 0) {
+//     document.write(i + "<br>");
+//   }
+// }
+
+// Задача 4
+// var result = 0;
+// var i = 1;
+// while (i >= 1 && i <= 100) {
+//   result += i;
+//   i++;
+// }
+// document.write(result);
+
+// var result = 0;
+// for (var i = 1; i >= 1 && i <= 100; i++) {
+//   result += i;
+// }
+// document.write(result);
+
+// Задача 5
+// var arr = [1, 2, 3, 4, 5];
+// for (i = 0; i < arr.length; i++) {
+//   document.write(arr[i] + "<br>");
+// }
+
+// Задача 6
+// var result = 0;
+// var arr = [1, 2, 3, 4, 5];
+// for (i = 0; i < arr.length; i++) {
+//   result += arr[i];
+//   document.write(result + "<br>");
+// }
+
+//Задача 7
+// var obj = { green: "зеленый", red: "Красный", blue: "голубой" };
+// for (key in obj) {
+//   document.write(key + " " + obj[key] + "<br>");
+// }
+
+// Задача 8
+// var obj = { Коля: 200, Вася: 300, Петя: 400 };
+// for (key in obj) {
+//   document.write(key + " - зарплата " + obj[key] + " долларов" + "<br>");
+// }
+
+//Задача 9
+// var arr = [2, 5, 9, 15, 0, 4];
+// for (i = 0; i < arr.length; i++) {
+//   if (arr[i] > 3 && arr[i] < 10) {
+//     document.write(arr[i] + "<br>");
+//   }
+// }
+
+// Задача 10
+// var result = 0;
+// var arr = [-1, -2, 2, 5];
+// for (i = 0; i < arr.length; i++) {
+//   if (arr[i] > 0) {
+//     document.write((result += arr[i]) + "<br>");
+//   }
+// }
+
+//Задача 11
+// var arr = [1, 2, 5, 9, 4, 13, 4, 10];
+// for (i = 0; i < arr.length; i++) {
+//   if (arr[i] == 4) {
+//     alert("Есть");
+//     break;
+//   }
+// }
+
+// Задача 12
+// var arr = [10, 20, 30, 50, 235, 3000];
+// for (i = 0; i < arr.length; i++) {
+//   var num = String(arr[i]);
+//   var char = num[0];
+//   if (char == 1 || char == 2 || char == 5) {
+//     document.write(num + "<br>");
+//   }
+// }
+
+// Задача 13
+// var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// for (i in arr) {
+//   document.write("-" + arr[i]);
+// }
+// document.write("-");
+
+//Задача 14
+// var week = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
+// for (day in week) {
+//   if (week[day] === "сб" || week[day] === "вс")
+//     document.write("<b>" + week[day] + "</b><br>");
+//   else document.write(week[day] + "<br>");
+// }
+
+// задача 15
+
+// var week = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
+// var today = "пн";
+// for (day in week) {
+//   if (week[day] == today) document.write("<i>" + week[day] + "</i><br>");
+//   else document.write(week[day] + "<br>");
+// }
+
+//Задача 16
+
+// for (var n = 1000, i = 0; n >= 50; i++, n /= 2);
+// document.write("Остаток " + n + "<br>" + "Итераций " + i + "<br>");
