@@ -1,250 +1,166 @@
-//Теория
-// while (пока выражение истинно) {
-//     выполняем этот код циклически;
-//     в начале каждого цикла проверяем выражение в круглых скобках
+// Теория
+// Методы: модуль числа, округление до ближайшего целого числа, округление до целого числа в большую сторону,округление до целого числа в меньшую сторону, получение минимального числа из группы чисел, переданных параметрами.(не дописал все)
+
+// Метод Math.abs возвращает модуль числа - из отрицательного делает положительное
+// console.log(Math.abs(-3));
+// console.log(Math.abs(3));
+
+//Метод Math.round выполняет окргуление до ближайшего целого числа по правилам математического округления
+// console.log(Math.round(6.4));
+// console.log(Math.round(6.6));
+// console.log(Math.round(6.5));
+// console.log(Math.round(6.49999));
+
+// Метод Math.ceil производит округление дробного числа до целого в большую сторону
+// console.log(Math.ceil(3.0001));
+
+// Метод Math.floor производит округление числа до целого в меньшую сторону
+//console.log(Math.floor(2.9999));
+
+// Метод Math.min возвращает минимальное число из группы чисел, переданных параметрами.
+// Вывод мин числа из массива Math.min.apply(null, arr)
+
+// console.log(Math.min(40, 20, 42, 100, 67));
+// console.log(Math.min(-1, -100, -30, -25, 40));
+// // Выведет infinity(Плюс бесконечность), т.к. методу не передали параметров
+// console.log(Math.min());
+
+// let arr = [40, 20, 42, 100, 67];
+// let min = Math.min.apply(null, arr);
+// console.log(min);
+
+// Метод Math.max  возвращает максимальное число из группы чисел
+//Вывод макс числа из массива Math.max.apply(null, arr)
+// console.log(Math.max(1, 5, 10, 34, 100));
+// console.log(Math.max(-1, 0, -20, -56, -100));
+// console.log(Math.max());
+// // Выведет -infinity(Минус бесконечность), т.к. методу не передали параметров
+
+// let arr = [1, 5, 10, 34, 100];
+// let max = Math.max.apply(null, arr);
+// console.log(max);
+
+//Метод Math.sqrt - возвращает квадратный корень числа
+// console.log(Math.sqrt(4));
+// console.log(Math.sqrt(15));
+//корень из -100 результат NaN, т.к. передано отрицателньое число
+// console.log(Math.sqrt(-100));
+
+// Метод Math.pow возводит число в заданную степень. Где 1 - число, а 2 - степень
+
+// console.log(Math.pow(3, 4));
+// // считает даже степень в минусе
+// console.log(Math.pow(2, -5));
+
+// Метод Math.random возвращает случайное дробное число от 0 до 1
+
+// console.log(Math.random());
+
+//Получение случайного числа между min и max
+// function getRandomInt(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1) + min);
 // }
+// console.log(getRandomInt(10, 100));
 
-// var i = 0;
-// while (i < 5) {
-//   i++;
-//   alert(i);
+//Получение случайного дробного числа между min и max
+// function getRandomArbitary(min, max) {
+//   return Math.random() * (max - min) + min;
 // }
+// console.log(getRandomArbitary(10, 100));
 
-// for(начальные команды; условие окончания цикла; команды после прохода цикла){
-//     тело цикла;
-// }
+// Метод toFixed производит окргугление числа до указанного знака в дробной части.
+// Количество знаков указывается параметром.
+// Если число знаков не указано, то по умолчанию берется 0 знаков, то есть округление до целого числа.
+// число.toFixed([количество знаков в дробной части]);
 
-// for (var i = 0; i < 10; i++) {
-//   alert(i);
-// }
+// let num = 1.1111;
+// console.log(num.toFixed(3));
 
-// Цикл без тела(т.к. в конце тела точка с запятой)
-// for (var i = 0; i < 10; i++);
-// alert(i);
+// let num = 1.1119;
+// console.log(num.toFixed(3));
 
-// for (var i = 0, j = 2; i < 10; i++, j++, i = i + j) {}
+// let num = 1.111;
+// console.log(num.toFixed());
 
-// var arr = [1, 2, 3, 4, 5];
-// for (var i = 0; i <= arr.length - 1; i++) {
-//   alert(arr[i]);
-// }
+// let num = 1.1111;
+// console.log(num.toFixed(6));
 
-// var arr = [1, 2, 3, 4, 5];
-// for (var i = 0; i < arr.length; i++) {
-//   alert(arr[i]);
-// }
+// Задача 1
+// выведет остаток от деления
+// var a = 10,
+//   b = 3;
+// alert(a % b);
 
-//Выведет ключи
-// var obj = { Коля: 200, Вася: 300, Петя: 400 };
-// for (key in obj) {
-//   alert(key);
-// }
+//Задача 2
+// var a = 10,
+//   b = 4;
+// if (a % b == 0) {
+//   alert("Делится без остатка");
+// } else alert("Делится с остатком");
 
-//Выведет значения
-// var obj = { Коля: 200, Вася: 300, Петя: 400 };
-// for (key in obj) {
-//   alert(obj[key]);
-// }
-
-// var arr = [1, 2, 3, 4, 5];
-// for (var i = 0; i < arr.length; i++) {
-//   if (arr[i] === 3) {
-//     break;
-//   } else {
-//     alert(arr[i]);
-//   }
-// }
-
-// Инструкция continue прерывает выполнение текущей итерации текущего или отмеченного цикла, и продолжает его выполнение на следующей итерации.
-
-// i = 0;
-// n = 0;
-// while (i < 5) {
-//   i++;
-//   if (i === 3) {
-//     continue;
-//   }
-//   alert((n += i));
-// }
-
-// Практические задачи
-// var i = 1;
-// while (i <= 50) {
-//   document.write(i + "<br>");
-//   i++;
-// }
-
-// for (var i = 1; i <= 50; i++) {
-//   document.write(i + "<br>");
-// }
-
-// var arr = [1, 2, 3, 4, 5];
-// for (var i = 0; i < arr.length; i++) {
-//   document.write(arr[i] + "<br>");
-// }
-
-// var result = 1;
-// var arr = [2, 3, 4, 5];
-// for (var i = 0; i < arr.length; i++) {
-//   result = result * arr[i];
-// }
-// alert(result);
-
-// var result = 1;
-// var arr = [2, 3, 4, 5];
-// for (var i = 0; i < arr.length; i++) {
-//   result *= arr[i];
-// }
-// alert(result);
-
-// var obj = {
-//   Минск: "Беларусь",
-//   Москва: "Россия",
-//   Киев: "Украина",
-// };
-// for (var key in obj) {
-//   alert(key + " - это " + obj[key] + ".");
-// }
-
-// Практические задачи #1
-// var i = 0;
-// while (i <= 100) {
-//   document.write(i + "<br>");
-//   i++;
-// }
-
-// for (i = 0; i <= 100; i++) {
-//   document.write(i + "<br>");
-// }
-
-//Задача №2
-// var i = 11;
-// while (i >= 11 && i <= 33) {
-//   document.write(i + "<br>");
-//   i++;
-// }
-
-// for (i = 11; i >= 11 && i <= 33; i++) {
-//   document.write(i + "<br>");
-// }
-
-//Задача №3
-// var i = 0;
-// while (i >= 0 && i <= 100) {
-//   if (i % 2 == 0 && i != 0) {
-//     document.write(i + "<br>");
-//   }
-//   i++;
-// }
-
-// for (i = 0; i <= 100; i++) {
-//   if (i % 2 == 0 && i != 0) {
-//     document.write(i + "<br>");
-//   }
-// }
+// Задача 3
+// alert(Math.pow(2, 10));
 
 // Задача 4
-// var result = 0;
-// var i = 1;
-// while (i >= 1 && i <= 100) {
-//   result += i;
-//   i++;
-// }
-// document.write(result);
-
-// var result = 0;
-// for (var i = 1; i >= 1 && i <= 100; i++) {
-//   result += i;
-// }
-// document.write(result);
+// console.log(Math.sqrt(245));
 
 // Задача 5
-// var arr = [1, 2, 3, 4, 5];
-// for (i = 0; i < arr.length; i++) {
-//   document.write(arr[i] + "<br>");
+// var arr = [4, 2, 5, 19, 13, 0, 10];
+// var j = 0;
+// for (var i = 0; i < arr.length; i++) {
+//   j += Math.pow(arr[i], 3);
 // }
+// console.log(Math.sqrt(j));
 
 // Задача 6
-// var result = 0;
-// var arr = [1, 2, 3, 4, 5];
-// for (i = 0; i < arr.length; i++) {
-//   result += arr[i];
-//   document.write(result + "<br>");
-// }
+// var a = 379;
+// console.log((b = Math.sqrt(a)));
+// console.log(b.toFixed());
+// console.log(b.toFixed(1));
+// console.log(b.toFixed(2));
 
-//Задача 7
-// var obj = { green: "зеленый", red: "Красный", blue: "голубой" };
-// for (key in obj) {
-//   document.write(key + " " + obj[key] + "<br>");
-// }
+// Задача 7
+// var obj = {};
+// Math.sqrt(587);
+// console.log((obj["floor"] = Math.floor(Math.sqrt(587))));
+// console.log((obj["ceil"] = Math.ceil(Math.sqrt(587))));
 
 // Задача 8
-// var obj = { Коля: 200, Вася: 300, Петя: 400 };
-// for (key in obj) {
-//   document.write(key + " - зарплата " + obj[key] + " долларов" + "<br>");
-// }
-
+// console.log(Math.max(4, -2, 5, 19, -130, 0, 10));
+// console.log(Math.min(4, -2, 5, 19, -130, 0, 10));
 //Задача 9
-// var arr = [2, 5, 9, 15, 0, 4];
-// for (i = 0; i < arr.length; i++) {
-//   if (arr[i] > 3 && arr[i] < 10) {
-//     document.write(arr[i] + "<br>");
-//   }
+// function getRandomInt(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
 // }
+// console.log(getRandomInt(1, 100));
 
 // Задача 10
-// var result = 0;
-// var arr = [-1, -2, 2, 5];
-// for (i = 0; i < arr.length; i++) {
-//   if (arr[i] > 0) {
-//     document.write((result += arr[i]) + "<br>");
-//   }
+// var arr = [];
+// for (i = 0; i < 10; i++) {
+//   arr[i] = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
 // }
+// alert(arr);
 
-//Задача 11
-// var arr = [1, 2, 5, 9, 4, 13, 4, 10];
-// for (i = 0; i < arr.length; i++) {
-//   if (arr[i] == 4) {
-//     alert("Есть");
-//     break;
-//   }
-// }
+// Задача 11
+// var a = 5,
+//   b = 10;
+// console.log(Math.abs(a - b));
 
 // Задача 12
-// var arr = [10, 20, 30, 50, 235, 3000];
-// for (i = 0; i < arr.length; i++) {
-//   var num = String(arr[i]);
-//   var char = num[0];
-//   if (char == 1 || char == 2 || char == 5) {
-//     document.write(num + "<br>");
-//   }
-// }
+// var a = 6,
+//   b = 1,
+//   c;
+// console.log((c = Math.abs(a - b)));
 
 // Задача 13
-// var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-// for (i in arr) {
-//   document.write("-" + arr[i]);
+// var arr = [12, 15, 20, 25, 59, 79];
+// var mean = 0;
+// for (i = 0; i < arr.length; i++) {
+//   mean += arr[i];
 // }
-// document.write("-");
+// console.log(mean / arr.length);
 
 //Задача 14
-// var week = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
-// for (day in week) {
-//   if (week[day] === "сб" || week[day] === "вс")
-//     document.write("<b>" + week[day] + "</b><br>");
-//   else document.write(week[day] + "<br>");
-// }
-
-// задача 15
-
-// var week = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
-// var today = "пн";
-// for (day in week) {
-//   if (week[day] == today) document.write("<i>" + week[day] + "</i><br>");
-//   else document.write(week[day] + "<br>");
-// }
-
-//Задача 16
-
-// for (var n = 1000, i = 0; n >= 50; i++, n /= 2);
-// document.write("Остаток " + n + "<br>" + "Итераций " + i + "<br>");
+// var n = 4;
+// for (i = 1, res = 1; i < n; i++, res *= i);
+// document.write(i + " " + res);
