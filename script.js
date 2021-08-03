@@ -1,166 +1,249 @@
-// Теория
-// Методы: модуль числа, округление до ближайшего целого числа, округление до целого числа в большую сторону,округление до целого числа в меньшую сторону, получение минимального числа из группы чисел, переданных параметрами.(не дописал все)
+// Теория Работа со строковыми функциями
 
-// Метод Math.abs возвращает модуль числа - из отрицательного делает положительное
-// console.log(Math.abs(-3));
-// console.log(Math.abs(3));
+// length - длина строки
+// let str = "abcde";
+// console.log(str.length);
 
-//Метод Math.round выполняет окргуление до ближайшего целого числа по правилам математического округления
-// console.log(Math.round(6.4));
-// console.log(Math.round(6.6));
-// console.log(Math.round(6.5));
-// console.log(Math.round(6.49999));
+// toUpperCase() - производит преобразование строки в верхний регистр
+// let str = "Язык Javascript";
+// console.log(str.toUpperCase());
 
-// Метод Math.ceil производит округление дробного числа до целого в большую сторону
-// console.log(Math.ceil(3.0001));
+// toLowerCase() - производит преобразование строки в нижний регистр
+// let str = "Язык JAVASCRIPT";
+// console.log(str.toLowerCase());
 
-// Метод Math.floor производит округление числа до целого в меньшую сторону
-//console.log(Math.floor(2.9999));
+//  Метод  substr возвращает подстроку из строки(1 = с какого места отрезать, 2 - сколько)
+// let str = "abcde";
+// let sub = str.substr(0, 3);
+// console.log(sub);
 
-// Метод Math.min возвращает минимальное число из группы чисел, переданных параметрами.
-// Вывод мин числа из массива Math.min.apply(null, arr)
+// let str = "abcde";
+// let sub = str.substr(2);
+// console.log(sub);
 
-// console.log(Math.min(40, 20, 42, 100, 67));
-// console.log(Math.min(-1, -100, -30, -25, 40));
-// // Выведет infinity(Плюс бесконечность), т.к. методу не передали параметров
-// console.log(Math.min());
+// let str = "abcde";
+// let sub = str.substr(-3, 2);
+// console.log(sub);
 
-// let arr = [40, 20, 42, 100, 67];
-// let min = Math.min.apply(null, arr);
-// console.log(min);
+// let str = "abcde";
+// let sub = str.substr(-3);
+// console.log(sub);
 
-// Метод Math.max  возвращает максимальное число из группы чисел
-//Вывод макс числа из массива Math.max.apply(null, arr)
-// console.log(Math.max(1, 5, 10, 34, 100));
-// console.log(Math.max(-1, 0, -20, -56, -100));
-// console.log(Math.max());
-// // Выведет -infinity(Минус бесконечность), т.к. методу не передали параметров
+// let str = "abcde";
+// let sub = str.substr(-1);
+// console.log(sub);
 
-// let arr = [1, 5, 10, 34, 100];
-// let max = Math.max.apply(null, arr);
-// console.log(max);
+// substring возвращает подстроку из строки, где 1 символ откуда начать, 2 символ - докуда резать
+// let str = "abcde";
+// let sub = str.substring(1, 3);
+// console.log(sub);
 
-//Метод Math.sqrt - возвращает квадратный корень числа
-// console.log(Math.sqrt(4));
-// console.log(Math.sqrt(15));
-//корень из -100 результат NaN, т.к. передано отрицателньое число
-// console.log(Math.sqrt(-100));
+// let str = "abcde";
+// let sub = str.substring(1);
+// console.log(sub);
 
-// Метод Math.pow возводит число в заданную степень. Где 1 - число, а 2 - степень
+// substr 1 символ - откуда отрезать, 2 символ - докуда резать
+// let str = "abcde";
+// let sub = str.slice(1, 3);
+// console.log(sub);
 
-// console.log(Math.pow(3, 4));
-// // считает даже степень в минусе
-// console.log(Math.pow(2, -5));
+// let str = "abcde";
+// let sub = str.slice(1);
+// console.log(sub);
 
-// Метод Math.random возвращает случайное дробное число от 0 до 1
+// let str = "abcde";
+// let sub = str.slice(1, -2);
+// console.log(sub);
 
-// console.log(Math.random());
+// Метод indexOf возвращает позицию первого совпадения, где 1 -что ищем, 2 - откуда начать поиск
+// let str = "Я учу учу Javascript";
+// console.log(str.indexOf("учу"));
 
-//Получение случайного числа между min и max
-// function getRandomInt(min, max) {
-//   return Math.floor(Math.random() * (max - min + 1) + min);
+// let str = "Я учу учу Javascript";
+// console.log(str.indexOf("учу", 5));
+
+// вернет -1 т.к. чувствителен к регистру и при не совпадении выдает -1
+// let str = "Я учу Javascript";
+// console.log(str.indexOf("JavaScript"));
+
+// вернет -1 т.к начиная с 8 символа "учу" больше нет и при не нахождении возвращает -1
+// let str = "Я учу Javascript";
+// console.log(str.indexOf("учу", 8));
+
+// split разбивает строки в массив по указанному разделителю
+
+// let str = "html-css-javascript";
+// let arr = str.split("-");
+// console.log(arr);
+
+// Вторым параметром указывает необходимое количество элементов
+// let str = "html-css-javascript";
+// let arr = str.split("-", 2);
+// console.log(arr);
+
+// let str = "adcde";
+// let arr = str.split("");
+// console.log(arr);
+
+// let str = "abcde";
+// let arr = str.split("", 3);
+// console.log(arr);
+
+// let str = "12345";
+// let arr = str.split("");
+// console.log(arr);
+
+// let str = "123456789";
+// let arr1 = str.split("");
+// let arr2 = arr1.reverse();
+// let result = arr2.join("");
+// console.log(result);
+
+// let str = "123456789";
+// let result = str.split("").reverse().join("");
+// console.log(result);
+
+// let str = "12345";
+// let arr = str.split("");
+// let sum = 0;
+// for (let i = 0; i < arr.length; i++) {
+//   sum += Number(arr[i]);
 // }
-// console.log(getRandomInt(10, 100));
+// console.log(sum);
 
-//Получение случайного дробного числа между min и max
-// function getRandomArbitary(min, max) {
-//   return Math.random() * (max - min) + min;
-// }
-// console.log(getRandomArbitary(10, 100));
+// let num = 12345;
+// let str = String(num);
+// let arr = str.split("");
+// console.log(arr);
 
-// Метод toFixed производит окргугление числа до указанного знака в дробной части.
-// Количество знаков указывается параметром.
-// Если число знаков не указано, то по умолчанию берется 0 знаков, то есть округление до целого числа.
-// число.toFixed([количество знаков в дробной части]);
+// Метод join - объединяет элементы массива в стркоу с указанием разделителя
+// let arr = [1, 2, 3];
+// let str = arr.join("-");
+// console.log(str);
 
-// let num = 1.1111;
-// console.log(num.toFixed(3));
+// По умолчанию разделитель - запятая
+// let arr = [1, 2, 3];
+// let str = arr.join();
+// console.log(str);
 
-// let num = 1.1119;
-// console.log(num.toFixed(3));
+// разделителя нет
+// let arr = [1, 2, 3];
+// let str = arr.join("");
+// console.log(str);
 
-// let num = 1.111;
-// console.log(num.toFixed());
+// let date = "2025-12-31";
+// let result = date.split("-").reverse().join(".");
+// console.log(result);
 
-// let num = 1.1111;
-// console.log(num.toFixed(6));
+//Функция implode сливает массив в строку с указанным разделителем, но это для php
 
-// Задача 1
-// выведет остаток от деления
-// var a = 10,
-//   b = 3;
-// alert(a % b);
+//Практика
+//Задача 1
+// g - изменит все, '@' - только 1 изменит
+// var str = "aaa@bbb@ccc";
+// alert(str.replace(/@/g, "!"));
 
 //Задача 2
-// var a = 10,
-//   b = 4;
-// if (a % b == 0) {
-//   alert("Делится без остатка");
-// } else alert("Делится с остатком");
+// var str = "aaa bbb ccc";
+// //substr(откуда отрезать, сколько отрезать)
+// alert(str.substr(4, 3));
+// // substring(откуда отрезать, докуда отрезать)
+// alert(str.substring(4, 7));
+// //slice(откуда отрезать, дкуда отрезать)
+// alert(str.slice(4, 7));
+
+//Задача 3
+// var date = "2025-12-31";
+// var arr = date.split("-");
+// arr.reverse();
+// console.log(arr.join("/"));
+
+// let arr2 = arr1.reverse();
+// let arr = str.split("-");
+// let result = arr2.join("");
+
+//Задачи для решения
+//Задача 1
+// var a = "js";
+// console.log(a.toUpperCase());
+
+// Задача 2
+// var a = "JS";
+// console.log(a.toLowerCase());
 
 // Задача 3
-// alert(Math.pow(2, 10));
+// var a = "я учу javascript",
+//   b;
+// b = a.length;
+// console.log(b);
 
 // Задача 4
-// console.log(Math.sqrt(245));
+// var a = "я учу javascript!",
+//   b;
+// b = a.substr(0, 1);
+// console.log(b);
+// b = a.substring(0, 2);
+// console.log(b);
+// b = a.slice(0, 2);
+// console.log(b);
 
 // Задача 5
-// var arr = [4, 2, 5, 19, 13, 0, 10];
-// var j = 0;
-// for (var i = 0; i < arr.length; i++) {
-//   j += Math.pow(arr[i], 3);
-// }
-// console.log(Math.sqrt(j));
+// var a = "я учу javascript",
+//   b;
+// b = a.indexOf("учу");
+// console.log(b);
 
 // Задача 6
-// var a = 379;
-// console.log((b = Math.sqrt(a)));
-// console.log(b.toFixed());
-// console.log(b.toFixed(1));
-// console.log(b.toFixed(2));
+// var str = "text",
+//   n = 3;
+// if (str.length == n) {
+//   console.log(str);
+// }
+// if (str.length > n) {
+//   console.log(str.slice(0, n));
+// }
 
 // Задача 7
-// var obj = {};
-// Math.sqrt(587);
-// console.log((obj["floor"] = Math.floor(Math.sqrt(587))));
-// console.log((obj["ceil"] = Math.ceil(Math.sqrt(587))));
+// var str = "Я-учу-javasript!";
+// console.log(str.replace(/-/g, "!"));
 
 // Задача 8
-// console.log(Math.max(4, -2, 5, 19, -130, 0, 10));
-// console.log(Math.min(4, -2, 5, 19, -130, 0, 10));
-//Задача 9
-// function getRandomInt(min, max) {
-//   return Math.floor(Math.random() * (max - min + 1)) + min;
-// }
-// console.log(getRandomInt(1, 100));
+// var str = "я учу javascript";
+// console.log(str.split(" "));
+
+// Задача 9
+// var str = "я учу javascript";
+// console.log(str.split(""));
 
 // Задача 10
-// var arr = [];
-// for (i = 0; i < 10; i++) {
-//   arr[i] = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
-// }
-// alert(arr);
+// var date = "2025-12-31";
+// console.log(date.split("-").reverse().join("."));
 
 // Задача 11
-// var a = 5,
-//   b = 10;
-// console.log(Math.abs(a - b));
+// var arr = ["я", "учу", "javascript", "!"];
+// console.log(arr.join("+"));
 
-// Задача 12
-// var a = 6,
-//   b = 1,
-//   c;
-// console.log((c = Math.abs(a - b)));
+//Задача 12
+// var str = "первую букву";
+// console.log(str.substr(0, 1).toUpperCase() + str.substr(1));
 
 // Задача 13
-// var arr = [12, 15, 20, 25, 59, 79];
-// var mean = 0;
-// for (i = 0; i < arr.length; i++) {
-//   mean += arr[i];
-// }
-// console.log(mean / arr.length);
+// var str = "я учу javascript!";
+// var arr = str.split(" ");
+// for (
+//   i = 0;
+//   i < arr.length;
+//   arr[i] = arr[i].substr(0, 1).toUpperCase() + arr[i].substr(1), i++
+// );
+// console.log(arr);
 
-//Задача 14
-// var n = 4;
-// for (i = 1, res = 1; i < n; i++, res *= i);
-// document.write(i + " " + res);
+// Задача 14
+// var str = "var_test_text";
+// var arr = str.split("_");
+// for (
+//   i = 1;
+//   i < arr.length;
+//   arr[i] = arr[i].substr(0, 1).toUpperCase() + arr[i].substr(1), i++
+// );
+// arr = arr.join("");
+// console.log(arr);
