@@ -1,47 +1,101 @@
-// var a = 4;
-// var b = 3;
-// var c = a > b;
-// В переменную с запишется true
-
-// var a = 3;
-// var b = 4;
-// var c = a < 10 && b < 10;
-
-// function func(a, b) {
-//   if (a > b) {
-//     return true;
-//   } else {
-//     return false;
+// for (var i = 1; i <= 9; i++) {
+//   for (var j = 1; j <= 3; j++) {
+//     document.write(i);
 //   }
 // }
+// Стандарные общепринятые названия для счетчиков - i, j, k
 
-// function func(a, b) {
-//   return a > b;
+// var str = "";
+// for (var i = 0; i < 10; i++) {
+//   str = str + "x";
+// }
+// alert(str);
+
+// var str = "";
+// for (var i = 0; i < 10; i++) {
+//   str = str + "x";
+//   document.write(str + "<br>");
 // }
 
-// var c = false || 5;
-// В с запишется 5
-// var c = 5 || false;
-// В с запишется 5
-// var c = 5 || 4;
-// В с запишется 5
-// var c = 4 || 5;
-// В с запишется 4
-
-//Задача 1
-// function myFunc(num1, num2) {
-//   return num1 == num2;
+// var str = "";
+// for (var i = 1; i <= 9; i++) {
+//   str = str + i;
 // }
-// alert(myFunc(5, 5));
+// alert(str);
+
+// for (var i = 1; i <= 9; i++) {
+//   for (var j = 1; j <= 3; j++) {
+//     document.write(i);
+//   }
+//   document.write("<br>");
+// }
+
+// for (var i = 1; i <= 9; i++) {
+//   for (var j = 1; j <= i; j++) {
+//     document.write(i);
+//   }
+//   document.write("<br>");
+// }
+
+// for (var i = 1; i <= 9; i++) {
+//   var str = "";
+//   for (var j = 1; j <= i; j++) {
+//     str = str + i;
+//   }
+//   document.write(str + "<br>");
+// }
+
+// var num = 500;
+// while (num > 10) {
+//   num = num / 2;
+// }
+// alert(num);
+
+// for (var num = 500; num > 10; num = num / 2);
+// alert(num);
+
+// Задача 1
+// var str = "";
+// for (var i = 1; i <= 9; i++) {
+//   str += i;
+// }
+// document.write(str);
 
 //Задача 2
-// function myFunc(a, b) {
-//   return a + b > 10;
+// var str = "";
+// for (var i = 9; i >= 1; i--) {
+//   str += i;
 // }
-// alert(myFunc(5, 6));
+// document.write(str);
 
 //Задача 3
-// function myFunc(a) {
-//   return a < 0;
+// var str = "";
+// for (i = 1; i <= 9; i++) {
+//   str += "-" + i;
 // }
-// alert(myFunc(-2));
+// str += "-";
+// document.write(str);
+
+//Задача 4
+// for (var i = 1; i <= 20; i++) {
+//   for (var j = 1; j <= i; j++) {
+//     document.write("x");
+//   }
+//   document.write("<br>");
+// }
+
+//Задача 5
+
+// for (var i = 1; i <= 9; i++) {
+//   for (var j = 1; j <= i; j++) {
+//     document.write(i);
+//   }
+//   document.write("<br>");
+// }
+
+//Задача 6
+// var str = "";
+// for (var i = 1; i <= 5; i++) {
+//   str = str + "xx";
+//   document.write(str + "<br>");
+// }
