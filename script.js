@@ -1,96 +1,47 @@
-// Флаги
+// var a = 4;
+// var b = 3;
+// var c = a > b;
+// В переменную с запишется true
 
-// var arr = ["a", "b", "c", "d", "e"];
-// for (var i = 0; i < arr.length; i++) {
-//   if (arr[i] == "c") {
-//     alert("Есть");
-//   }
-// }
+// var a = 3;
+// var b = 4;
+// var c = a < 10 && b < 10;
 
-// var arr = ["a", "b", "c", "d", "c"];
-// for (var i = 0; i < arr.length; i++) {
-//   if (arr[i] == "c") {
-//     alert("Есть");
-//   }
-// }
-
-// var arr = ["a", "b", "c", "d", "e"];
-// for (var i = 0; i < arr.length; i++) {
-//   if (arr[i] == "c") {
-//     alert("Есть");
-//     break;
-//   }
-// }
-
-// var arr = ["a", "b", "c", "d", "c"];
-// for (var i = 0; i < arr.length; i++) {
-//   if (arr[i] == "c") {
-//     alert("Есть");
+// function func(a, b) {
+//   if (a > b) {
+//     return true;
 //   } else {
-//     alert("Нет");
+//     return false;
 //   }
 // }
 
-// var arr = ["a", "b", "c", "d", "e"];
-// var flag = false;
-// for (var i = 0; i < arr.length; i++) {
-//   if (arr[i] == "c") {
-//     flag = true;
-//     break;
-//   }
-// }
-// if (flag === true) {
-//   alert("Есть");
-// } else {
-//   alert("Нет");
+// function func(a, b) {
+//   return a > b;
 // }
 
-// function hasElem(arr) {
-//   for (var i = 0; i < arr.length; i++) {
-//     if (arr[i] == "c") {
-//       return true;
-//     }
-//   }
-//   return false;
-// }
-// var arr = ["a", "b", "c", "d", "c"];
-// alert(hasElem(arr));
+// var c = false || 5;
+// В с запишется 5
+// var c = 5 || false;
+// В с запишется 5
+// var c = 5 || 4;
+// В с запишется 5
+// var c = 4 || 5;
+// В с запишется 4
 
 //Задача 1
-// var arr = [1, 2, 3, 4, 5];
-// var flag = false;
-// for (var i = 0; i < arr.length; i++) {
-//   if (arr[i] == 5) {
-//     flag = true;
-//     break;
-//   }
+// function myFunc(num1, num2) {
+//   return num1 == num2;
 // }
-// if ((flag = true)) {
-//   alert("Да");
-// } else {
-//   alert("Нет");
-// }
+// alert(myFunc(5, 5));
 
 //Задача 2
-// var char = 31;
-// var flag = false;
-// for (var i = 2; i < char; i++) {
-//   if (char % i == 0) {
-//     alert("true");
-//     break;
-//   } else {
-//     alert("false");
-//     break;
-//   }
+// function myFunc(a, b) {
+//   return a + b > 10;
 // }
+// alert(myFunc(5, 6));
 
-// Задача 3
-// let arr = [1, 2, 3, 5, 4, 4];
-// function arrChar(arr) {
-//   for (let i = 0; i < arr.length - 1; i++) {
-//     if (arr[i] == arr[i + 1]) return alert("да");
-//   }
-//   return alert("нет");
+//Задача 3
+// function myFunc(a) {
+//   return a < 0;
 // }
-
-// arrChar(arr);
+// alert(myFunc(-2));
