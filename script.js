@@ -1,220 +1,95 @@
-// function func(num) {
-//   if (num === undefined) {
-//     num = 3;
+// for (i = 1; i <= 100; i++) {
+//   document.write(i + "<br>");
+// }
+
+// for (i = 100; i >= 1; i--) {
+//   document.write(i + "<br>");
+// }
+
+// for (i = 2; i <= 100; i += 2) {
+//   document.write(i + "<br>");
+// }
+
+// var arr = [];
+// for (i = 0; i < 10; i++) {
+//   arr.push("x");
+// }
+// document.write(arr);
+
+// var arr = [];
+// for (var i = 0; i < 10; i++) {
+//   arr[i] = "x";
+// }
+// document.write(arr);
+
+// var arr = [];
+// for (var i = 1; i <= 10; i++) {
+//   arr.push(i);
+// }
+// document.write(arr);
+
+// var arr = [];
+// for (var i = 1; i <= 10; i++) {
+//   arr[i] = i;
+// }
+// document.write(arr);
+
+// var arr = [];
+// for (var i = 1; i <= 10; i++) {
+//   arr.push(Math.random().toFixed(2) + "<br>");
+// }
+// document.write(arr);
+
+// var arr = [];
+// for (var i = 1; i <= 10; i++) {
+//   arr.push(getRandomInt(1, 10));
+// }
+// function getRandomInt(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1) + min) + "<br>";
+// }
+// document.write(arr);
+
+// var arr = [];
+// for (var i = 0; i < 10; i++) {
+//   arr.push(Math.round(Math.random() * 9) + 1);
+// }
+// document.write(arr);
+
+// var arr = [-5, -2, 0, 1, 5, 7, 9, 14];
+// var result = [];
+// for (i = 0; i < arr.length; i++) {
+//   if (arr[i] > 0 && arr[i] < 10) {
+//     result.push(arr[i]);
 //   }
-//   return num * num;
 // }
-// function func(num1, num2, num3) {
-//   num3 = num3 || 3;
-//   num2 = num2 || 2;
-//   return num * num;
-// }
-// alert(func());
+// document.write(result);
 
-// function func() {
-//   var local = "Тест";
-//   alert(local);
-// }
-// func();
-// alert(local);
-
-// var test = "Тест!";
-// function func() {
-//   var test = "Локальная!";
-//   alert(test);
-// }
-// func();
-
-// var test = "Тест!";
-// function func() {
-//   alert(test);
-// }
-// func();
-
-// var global = "Тест!";
-// function func() {
-//   global = "Поменялась!";
-// }
-// func();
-// alert(global);
-
-// var global = "Тест";
-// function func() {
-//   var global = "Поменялась";
-// }
-// func();
-// alert(global);
-
-// function func() {
-//   var local = "Тест";
-//   alert(local);
-// }
-// func();
-// alert(local);
-
-// function func() {
-//   local = "Тест";
-//   alert(local);
-// }
-// func();
-// alert(local);
-
-// var test = "Привет";
-// function func() {
-//   test = "Тест";
-// }
-// func();
-// alert(test);
-
-// use strict почему то не показал ошибку а должен был
-// "use strict";
-// var test = "Привет!";
-// function func() {
-//   test = "Тест!";
-// }
-// func();
-// alert(test);
-
-// var test = "Тест";
-// alert(window.test);
-
-// syntax error
-// var window.test = 'Тест!';
-// alert(test);
-
-// function func1() {
-//   window.test = "Тест";
-// }
-// function func2() {
-//   alert(window.test);
-// }
-// func1();
-// func2();
-
-// var arr = [1, 2, 3, 4, 5];
-// last(arr);
-// function last(arr) {
-//   document.write(arr.pop() + "<br>");
-//   if (arr.length != 0) {
-//     last(arr);
+// var arr = [-3, 1, 5, 9, 11];
+// for (i = 0; i < arr.length; i++) {
+//   if (arr[i] == 5) {
+//     document.write("Есть");
+//     break;
 //   }
 // }
 
-// let i = 0;
-// function func() {
-//   console.log(i++);
-//   if (i <= 10) {
-//     func();
-//   }
-// }
-// func();
-
-// function func(arr) {
-//   console.log(arr.shift());
-//   if (arr.length != 0) {
-//     func(arr);
-//   }
-// }
-// func([1, 2, 3]);
-
-// function func(arr, sum) {
-//   sum += arr.shift();
-//   if (arr.length != 0) {
-//     sum = func(arr, sum);
-//   }
-//   return sum;
-// }
-// console.log(func([1, 2, 3], 0));
-
-// function func(arr, sum) {
-//   if (sum === undefined) {
-//     sum = 0;
-//   }
-//   sum += arr.shift();
-//   if (arr.length != 0) {
-//     sum = func(arr, sum);
-//   }
-//   return sum;
-// }
-// console.log(func([1, 2, 3]));
-
-// Не отработал пример
+// var arr = [1, 2, 5, 7];
 // var sum = 0;
-// functioon func(arr) {
-//     sum += arr.shift();
-//     if(arr.length != 0) {
-//         sum = func(arr);
-//     }
-//     return sum;
+// for (i = 0; i < arr.length; i++) {
+//   sum += arr[i];
 // }
-// console.log(func([1,2,3]));
+// document.write(sum);
 
-// function func(arr) {
-//   for (var i = 0; i < arr.length; i++) {
-//     if (typeof arr[i] == "object") {
-//       arr[i] = func(arr[i]);
-//     } else {
-//       arr[i] = arr[i] + "!";
-//     }
-//   }
-//   return arr;
-// }
-// console.log(func([1, 2, [3, 4, [5, 6, 7]]]));
-
-// function reduceNum(num) {
-//   var sum = getDigitSum(num);
-//   if (sum >= 10) {
-//     return reduceNum(sum);
-//   } else {
-//     return sum;
-//   }
-// }
-// function getSum(arr) {
-//   var sum = 0;
-//   for (var i = 0; i < arr.length; i++) {
-//     sum += Number(arr[i]);
-//   }
-//   return sum;
-// }
-// function getDigits(num) {
-//   return String(num).split("");
-// }
-// function getDigitSum(num) {
-//   return getSum(getDigits(num));
-// }
-// console.log(reduceNum(127));
-
-//Задача 1
-// function func(arr) {
-//   console.log(arr[0]);
-//   arr.splice(0, 1);
-//   if (arr.length > 0) {
-//     func(arr);
-//   }
-// }
 // var arr = [1, 2, 3];
-// func(arr);
+// var sum = 0;
+// for (i = 0; i < arr.length; i++) {
+//   sum += arr[i] * arr[i];
+// }
+// document.write(sum);
 
-//Задача 2
-function reduceNum(num) {
-  var sum = getDigitSum(num);
-  if (sum > 9) {
-    return reduceNum(sum);
-  } else {
-    return sum;
-  }
-}
-function getSum(arr) {
-  var sum = 0;
-  for (var i = 0; i < arr.length; i++) {
-    sum += Number(arr[i]);
-  }
-  return sum;
-}
-function getDigits(num) {
-  return String(num).split("");
-}
-function getDigitSum(num) {
-  return getSum(getDigits(num));
-}
-console.log(reduceNum(245));
+// var arr = [2, 2, 4, 4];
+// var sum = 0;
+// for (i = 0; i < arr.length; i++) {
+//   sum += arr[i];
+// }
+// result = sum / arr.length;
+// document.write(result);
