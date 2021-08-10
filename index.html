@@ -4,9 +4,327 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>18 урок</title>
+    <title>19 урок</title>
   </head>
   <body>
+    <!-- Атрибут - значение:
+    onclick - кнопка нажата,
+    onmouseover - при наведении,
+    onmouseout - при уходе курсора с элемента,
+    onmousedown - при нажатии кнопки,
+    onmouseup - при отжатии кнопки,
+    ondblclick - двойной щелчок,
+    onmousemove - указатель - движется внутри элемента,
+    onkeydown - при выборе конпки и нажатии на клавиатуру(нажата кнопка на клавиатуре),
+    onkeypress - кнопка на клавиатуре нажата и не отпускается больше интервала повторения,
+    onkeyup - отпущена ранее нажатая кнопка - после выбора кнопки мышкой 
+    и другие...
+     -->
+    1<input type="submit" onclick="alert('!')" />
+    <br />
+    2<input type="submit" onmouseover="alert('!')" />
+    <br />
+    3<input type="submit" onmouseout="alert('!')" />
+    <br />
+    4<input type="submit" onclick="func()" />
+    <br />
+    5<input type="submit" onclick="func1();func2();" />
+    <br />
+    6<input type="submit" onmousedown="alert('!')" />
+    <br />
+    7<input type="submit" onmouseup="alert('!')" />
+    <br />
+    8<input type="submit" ondblclick="alert('!')" />
+    <br />
+    9<input type="submit" onmousemove="alert('!')" />
+    <br />
+    10<input type="submit" onkeydown="alert('!')" />
+    <br />
+    11<input type="submit" onkeypress="alert('!')" />
+    <br />
+    12<input type="submit" onkeyup="alert('!')" />
+    <!-- 3 способа использования двойных кавычек для строки и внешних кавычек вместе:
+    onclick ='alert("!")', - использование одинарных и двойных кавычек вместе;
+    onclick = "alert(\"!\")", - экранировать внутренние кавычки обратным слешем;
+    onclick = "func()" - перенести JS код из атрибута в функцию, а в атрибуте
+    оставить только имя функции -->
+
+    <br />
+    <input type="text" value="!" class="aaa bbb" id="test" />
+    <br />
+    13<input type="submit" onclick="func()" />
+    <br />
+    14<input type="submit" onclick="funcs()" id="test" value="!" />
+    <br />
+    15<input type="submit" onclick="funcs1()" id="test1" value="input1" />
+    <br />
+    16<input type="submit" onclick="funcs2()" id="test2" value="input2" />
+    <br />
+    17<input type="submit" onclick="funcs3()" id="test3" value="input3" />
+    <br />
+    18<input
+      type="submit"
+      onclick="funcs4('test1')"
+      id="test1"
+      value="input1"
+    />
+    <br />
+    19<input
+      type="submit"
+      onclick="funcs4('test2')"
+      id="test2"
+      value="input2"
+    />
+    <br />
+    20<input
+      type="submit"
+      onclick="funcs4('test3')"
+      id="test3"
+      value="input3"
+    />
+    <br />
+    <br />
+    21<input type="submit" onclick="funcs5(this)" value="input1" />
+    <br />
+    22<input type="submit" onclick="funcs5(this)" value="input2" />
+    <br />
+    23<input type="submit" onclick="funcs5(this)" value="input3" />
+    <br />
+    <br />
+    24<input type="text" id="test6" value="!" />
+    <br />
+    25<input type="submit" onclick="funcs6(this)" />
+    <br />
+    <br />
+
+    <!-- Задачи -->
+    <button onclick="alert('Привет')">Нажми на меня</button>
+    <br />
+    <br />
+    <button onclick="buttonClick()">Нажми на меня</button>
+    <br />
+    <input type="text" id="input" value="Введите число!" />
+    <input type="text" id="input1" value="!!!" />
+    <input type="text" id="input2" value="???" />
+
+    <br />
+    <br />
+    <input type="button" onclick="buttonClick2(this)" value="Нажми на меня" />
+    <br />
+    <br />
+    <button onclick="button1Click()">Заблокировать</button>
+    <br />
+    <button onclick="button2Click()">Разблокировать</button>
+    <br />
+    <input type="text" id="input3" value="Какой-то текст" />
+    <br />
+    <br />
+    <br />
+    <div>Задачи практические</div>
+    1<button onclick="alert('Привет!');">Нажми на меня</button>
+    <br />
+    <br />
+    2<button onmouseover="alert('Привет!');">Наведи на меня!</button>
+    <br />
+    <br />
+    3<button ondblclick="alert('Привет!')">Двойнойной щелчок по мне!</button>
+    <br />
+    <br />
+    4
+    <div
+      style="border: 1px solid red; width: 300px; height: 400px"
+      onmouseout="alert('Привет!')"
+    >
+      Двойнойной щелчок по мне!
+    </div>
+    <br />
+    <br />
+    5
+    <input type="text" id="input10" value="Ку-ку" />
+    <button onclick="myFunc()">Нажми на меня!</button>
+    <br />
+    <br />
+    <input type="text" id="input11" value="Ку-ку" />
+    <button onclick="myFunc2()">Нажми на меня!</button>
+    <br />
+    <br />
+    <img src="img/1.jpg" id="img" alt="" />
+    <br />
+    <button onclick="myFunc3()">Нажми на меня</button>
+    <br />
+    <br />
+    8<input type="text" onclick="myFunc4(this)" value="Нажми на меня!!" />
+    <br />
+    <br />
+    9
+    <input type="text" onclick="myFunc5(this)" value="Нажми на меня!" />
+    <br />
+    <br />
+    10
+    <input
+      style="width: 300px"
+      type="text"
+      onclick="myFunc6(this)"
+      onblur="myFunc7(this)"
+      value="Нажми на меня!"
+    />
+    <br />
+    <br />
+    11
+    <input
+      style="width: 250px"
+      type="button"
+      onclick="myFunc8(this)"
+      value="Нажми на меня!!"
+    />
+    <br />
+    <br />
+    12
+    <input
+      style="width: 250px"
+      type="button"
+      onclick="myFunc9(this)"
+      value="Нажми на меня!"
+    />
+    <br />
+    <br />
+    13
+    <img
+      src="img/1.jpg"
+      onmouseover="myFunc10(this)"
+      onmouseout="myFunc11(this)"
+      alt=""
+    />
+    <br />
+    <br />
+    14
+    <input style="width: 150px" type="text" id="input12" value="Ку-ку" />
+    <br />
+    <button onclick="myFunc12(this)">Нажми на меня!!!</button>
+    <br />
+    <br />
+    15
+    <input type="text" id="input13" value="ку-ку" />
+    <button onclick="myFunc13()">Нажми на меня!</button>
+    <button onclick="myFunc14()">Нажми потом на меня!</button>
+    <br />
+    <br />
+    16 <input type="text" id="input14" value="Ку-ку" />
+    <button onclick="myFunc15()">Нажми на меня!</button>
+    <br />
+    <br />
+    17
+    <input
+      type="button"
+      onclick="myFunc16()"
+      value="Нажми на меня!"
+      id="input15"
+    />
+    <input
+      style="display: none"
+      ;
+      value="Нажми чтобы отблокировать элемент"
+      onclick="myFunc17()"
+      id="input16"
+      type="button"
+    />
+    <br />
+    <br />
+    18
+    <input type="button" onclick="myFunc18(this)" value="0" />
+    <br />
+    <br />
+    19
+    <input type="text" id="input17" value="ку-ку" />
+    <input type="button" onclick="myFunc19()" value="Нажми на меня" />
+    <br />
+    <br />
+    20
+    <input
+      style="width: 250px"
+      type="text"
+      id="input18"
+      class="eee www ddd"
+      value="Ку-ку"
+    />
+    <input type="button" onclick="myFunc20()" value="Нажми на меня!" />
+    <br />
+    <br />
+    21
+    <input type="text" id="input19" value="Привет" />
+    <input type="text" id="input20" value="Пока" />
+    <input type="button" onclick="myFunc21()" value="Нажми на меня" />
+    <br />
+    <br />
+    22
+    <input type="text" id="input21" placeholder="Введите число" />
+    <input type="text" id="input22" placeholder="Здесь появится результат" />
+    <input type="button" onclick="myFunc22()" value="Нажми на меня" />
+    <br />
+    <br />
+    23
+    <input type="text" id="input23" placeholder="Введите число" />
+    <input type="text" id="input24" placeholder="Здесь появится результат" />
+    <input type="button" onclick="myFunc23()" value="Нажми на меня" />
+    <br />
+    <br />
+    24
+    <input
+      style="cursor: pointer"
+      type="button"
+      onclick="myFunc24(this)"
+      value="Нажми на меня"
+    />
+    <br />
+    <br />
+    25
+    <input type="text" id="input25" />
+    <br />
+    <input type="button" onclick="myFunc25()" value="Я добавлю +" />
+    <br />
+    <input type="button" onclick="myFunc26()" value="Я добавлю -" />
+    <br />
+    <input type="button" onclick="myFunc27()" value="Я добавлю /" />
+    <br />
+    <input type="button" onclick="myFunc28()" value="Я добавлю *" />
+    <br />
+    <input type="button" onclick="myFunc29()" value="1" />
+    <br />
+    <input type="button" onclick="myFunc30()" value="2" />
+    <br />
+    <input type="button" onclick="myFunc31()" value="3" />
+    <br />
+    <input type="button" onclick="myFunc32()" value="4" />
+    <br />
+    <input type="button" onclick="myFunc33()" value="5" />
+    <br />
+    <input type="button" onclick="myFunc34()" value="6" />
+    <br />
+    <input type="button" onclick="myFunc35()" value="7" />
+    <br />
+    <input type="button" onclick="myFunc36()" value="8" />
+    <br />
+    <input type="button" onclick="myFunc37()" value="9" />
+    <br />
+    <input type="button" onclick="myFunc38()" value="0" />
+    <br />
+    <br /><br />
+    <!-- Решение попроще -->
+    <input type="text" value="" id="text" /><br />
+    <input type="submit" value="Я добавлю +" onclick="func('+');" /><br />
+    <input type="submit" value="Я добавлю -" onclick="func('-');" /><br />
+    <input type="submit" value="Я добавлю /" onclick="func('/');" /><br />
+    <input type="submit" value="Я добавлю *" onclick="func('*');" /><br />
+    <input type="submit" value="1" onclick="func('1');" />
+    <input type="submit" value="2" onclick="func('2');" />
+    <input type="submit" value="3" onclick="func('3');" />
+    <input type="submit" value="4" onclick="func('4');" />
+    <input type="submit" value="5" onclick="func('5');" />
+    <input type="submit" value="6" onclick="func('6');" />
+    <input type="submit" value="7" onclick="func('7');" />
+    <input type="submit" value="8" onclick="func('8');" />
+    <input type="submit" value="9" onclick="func('9');" />
+    <input type="submit" value="0" onclick="func('0');" />
     <script src="script.js"></script>
   </body>
 </html>
