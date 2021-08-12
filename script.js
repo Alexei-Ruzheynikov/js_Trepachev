@@ -1,297 +1,234 @@
 // function func() {
-//   alert("!*");
+// var elem = document.getElementById("test");
+// elem.innerHTML = "!";
+// Так же можно добавлять тэги
+// elem.innerHTML = "<b>!</b>";
+// elem.outerHTML = "<b>!</b>";
+// }
+//
+
+// function func() {
+//   var elems = document.getElementsByTagName("p");
+// elems[0].innerHTML = "1";
+// elems[1].innerHTML = "2";
+// elems[2].innerHTML = "3";
+//   for (var i = 0; i < elems.length; i++) {
+//     elems[i].innerHTML = "!";
+//   }
 // }
 
-// function func1() {
-//   alert("1");
+//document.forms - обращаемся ко всем формам как к массиву по номеру
+// document.forms[0].innerHTML = "!";
+
+// var forms = document.forms;
+// for (var i = 0; i < forms.length; i++) {
+//   forms[i].innerHTML = "!";
 // }
 
+// к форме можно обращаться по атрибуту name у нее
+// document.forms.form1.innerHTML = "!";
+// document.forms["form2"].innerHTML = "?";
+
+//обращение к свойству elements формы(содержит массив свойств формы)
+// document.forms[1].elements[0].value = "!";
+
+//Переберем циклом - код не отработал как ожидалось
+// var elements = document.forms[1].elements;
+// for (var i = 0; i < elements.length; i++) {
+//   elements[i] = "!";
+// }
+
+// обращение по name формы и name инпута
+// document.forms.form1.elements.input1.value = "!";
+
+// метод getAttribute - считывает значение указанного атрибута
+// метод setAttribute - записывает новое значение в атрибут
+// метод removeAttribute - удаляет атрибут совсем
+// метод hasAttribute - проверяет наличие или отсутствие атрибута у свойства
+// function func() {
+//   var elem = document.getElementById("test");
+// alert(elem.getAttribute("value"));
+// elem.setAttribute("value", "www");
+// elem.removeAttribute("value");
+// alert(elem.hasAttribute("value"));
+// }
+
+// с помощью метода getElementsByClassName получаем свойства по классу
+// function func() {
+//   var elems = document.getElementsByClassName("www");
+//   for (var i = 0; i < elems.length; i++) {
+//     elems[i].innerHTML = "!";
+//   }
+// }
+
+// С помощью метода querySelector можно найти любой элемент, в случае querySelector если их много, то выбран будет первый
+// function func() {
+// var elem = document.querySelector("input.test");
+//   var elem = document.querySelector("#test");
+
+//   alert(elem.getAttribute("value"));
+// }
+
+// С помощью метода querySelectorAll можно найти все элементы подходящие под поиск(описание)
+// function func() {
+//   var elems = document.querySelectorAll(".www");
+//   for (var i = 0; i < elems.length; i++) {
+//     elems[i].innerHTML = "!";
+//   }
+// }
+
+// Мы можем создавать свои атрибуты через data-свое-название и обращаться к ним через dataset.своеНазвание
+// function func() {
+//   var elem = document.getElementById("elem");
+//   alert(elem.dataset.price);
+//   alert(elem.dataset.productNumber);
+// }
+
+// function func() {
+// var elem = document.getElementById("test");
+// elem.value = "new"; //поменяли свойство
+// alert(elem.getAttribute("value")); //выведет 'old' - не изменилось!
+
+// var elem = document.getElementById("test");
+
+// elem.setAttribute("value", "new"); //поменяли атрибут
+// alert(elem.value); //выведет 'new' - elem.value изменилось!
+// }
+//
+
+// function buttonClick() {
+//   var elem = document.getElementById("elem");
+//   elem.innerHTML = "!!!";
+// }
+
+// function buttonClick() {
+//   var elem = document.getElementById("elem");
+//   elem.outerHTML = "<b>" + elem.outerHTML + "</b>";
+// }
+
+// function func() {
+//   var elems = document.getElementsByTagName("p");
+//   for (var i = 0; i < elems.length; i++) {
+//     elems[i].innerHTML = i + 1;
+//   }
+// }
+
+// function func() {
+//   var elems = document.getElementsByClassName("zzz");
+//   for (var i = 0; i < elems.length; i++) {
+//     elems[i].innerHTML = i + 1;
+//   }
+// }
+
+// function func() {
+//   var elems = document.querySelectorAll("p.zzz");
+//   for (var i = 0; i < elems.length; i++) {
+//     elems[i].innerHTML = i + 1;
+//   }
+// }
+
+// function func() {
+//   var elem = document.getElementsByClassName("test");
+//   elem[0].innerHTML = "Ку-ку! А я" + "<b>жирный</b>";
+// }
+
+// function func() {
+//   var elem = document.getElementsByTagName("p");
+//   elem[0].outerHTML = "<h3>Абзац превратился в h3!</h3>";
+// }
+
+// function func() {
+//   var elem = document.getElementsByTagName("p");
+//   elem[0].outerHTML =
+//     "<h3>При нажатии на кнопку абзац станет h3, но текст останется</h3>";
+// }
+
+// function func() {
+//   var elem = document.getElementsByTagName("input");
+//   var Value1 = Number(elem[0].value);
+//   var Value2 = Number(elem[1].value);
+//   var elemResult = document.getElementsByClassName("result");
+//   elemResult[0].innerHTML = Value1 + Value2;
+// }
+
+// function func() {
+//   var elem = document.getElementsByTagName("p");
+//   for (i = 0; i < elem.length; i++) {
+//     elem[i].innerHTML = "Ку-ку";
+//   }
+// }
+
+// var elem = document.getElementsByClassName("www");
+// for (var i = 0; i < elem.length; i++) {
+//   elem[i].innerHTML = i + 1;
+// }
+
+// var elem = document.querySelectorAll("p.www");
+// for (var i = 0; i < elem.length; i++) {
+//   elem[i].innerHTML = i + 1;
+// }
+
+// function func() {
+//   var elem = document.querySelector("#my-class");
+//   alert(elem.getAttribute("class"));
+// }
+
+// function func() {
+//   var elem = document.querySelector("#my-class");
+//   alert(elem.getAttribute("class"));
+// }
 // function func2() {
-//   alert("2");
+//   var elem = document.querySelector("#my-class");
+//   elem.removeAttribute("class");
+// }
+
+// function func() {
+//   var elem = document.querySelector("#my-class");
+//   alert(elem.getAttribute("class"));
+// }
+// function func2() {
+//   var elem = document.querySelector("#my-class");
+//   elem.setAttribute("class", "new-class");
+//   alert("Класс измменен, нажмите на 1 кнопку для првоерки");
+// }
+
+// function func() {
+//   var elem = document.getElementById("input1");
+//   var elemTwo = document.getElementById("p1");
+//   var Value1 = elem.value;
+//   elemTwo.innerHTML = elem.value;
+
+// document.getElementById("p1").innerHTML =
+//   document.getElementById("input1").value;
+// }
+
+// function func() {
+//   var links = document.getElementsByTagName("a");
+//   for (var i = 0; i < links.length; i++) {
+//     links[i].innerHTML += "(" + links[i].getAttribute("href") + ")";
+//   }
+// }
+
+// function func() {
+//   var elem = document.getElementById("p1");
+//   elem.innerHTML = "Привет, мир!";
+//   elem.setAttribute("class", "my-class");
+//   var elemTwo = document.getElementById("input1");
+//   elemTwo.value = "О на меня нельзя нажать";
+//   elemTwo.disabled = true;
+// }
+
+// function func() {
+//   var elem = document.getElementsByClassName("p1");
+//   for (var i = 0; i < elem.length; i++) {
+//     elem[i].innerHTML = i + 1;
+//   }
 // }
 
 function func() {
-  //   var elem = document.getElementById("test");
-  //   alert(elem.value);
-  //   alert(elem.id);
-  //   alert(elem.type);
-  //   elem.value = "www";
-  //   alert(document.getElementById("test").value);
-  //   document.getElementById("test").value = "www";
-  //   var elem = document.getElementById("test");
-  //   elem.value = "www";
-  //   elem.type = "submit";
-  //   document.getElementById("test").value = "www";
-  //   document.getElementById("test").type = "submit";
-  // Обращаться к атрибуту класссу (class) необходимо через className, еще для атрибута for соответствует свойство с названием htmlFor
-  //   var elem = document.getElementById("test");
-  //   alert(elem.className);
-}
+  var elem = document.getElementsByClassName("p1");
 
-// Работа с getElementById и любая работа с элементами страницы - это медленная операция(браузер каждый раз обрабатывает HTML страницу и ищет элемент с заданным id несколько раз - не важно, что id одинаковый - браузер проделает все действия несколько раз)
-// Если использовать переменную elem - то повторного поиска не происходит(элемент уже найден и ссылка на него лежит в переменной elem)
-function funcs() {
-  var elem = document.getElementById("test");
-  alert(elem.value);
-}
-
-function funcs1() {
-  var elem = document.getElementById("test1");
-  alert(elem.value);
-}
-function funcs2() {
-  var elem = document.getElementById("test2");
-  alert(elem.value);
-}
-function funcs3() {
-  var elem = document.getElementById("test3");
-  alert(elem.value);
-}
-function funcs4(id) {
-  var elem = document.getElementById(id);
-  alert(elem.value);
-}
-
-function funcs5(elem) {
-  alert(elem.value);
-}
-function funcs6() {
-  //   var elem = document.getElementById("test6");
-  //   elem.style.color = "red";
-  //   document.getElementById("test6").style.color = "red";
-  //   var elem = document.getElementById("test6");
-  //   elem.style.fontSize = "18px";
-  //   var elem = document.getElementById("test");
-  //   elem.style.mozBoxSizing = "border-box";
-  //   var elem = document.getElementById("test6");
-  //   elem.style.cssFloat = "left";
-}
-
-// Свойства, которые пишутся через дефис в css пишутся слитно и с большой буквы,например font-size fontSize
-// А кроссбраузерное -moz-box-sizing - mozBoxSizing
-
-// Свойство float так же как и class - является исключением и пишется как cssFloat
-
-// Задачи
-function buttonClick() {
-  //   var input = document.getElementById("input");
-  //   input.value = "!!!";
-  //   var input = document.getElementById("input");
-  //   alert(input.value);
-  //   var input = document.getElementById("input");
-  //   var number = Number(input.value);
-  //   var square = number * number;
-  //   alert(square);
-  var input1 = document.getElementById("input1");
-  var input2 = document.getElementById("input2");
-  var input1Value = input1.value;
-  var input2Value = input2.value;
-  input1.value = input2Value;
-  input2.value = input1Value;
-  //   var input = document.getElementById("input");
-  //   input.style.color = "red";
-  // или
-  document.getElementById("input").style.color = "red";
-}
-
-function buttonClick2(elem) {
-  elem.value = "Новый текст кнопки";
-}
-
-function button1Click() {
-  var input = document.getElementById("input3");
-  input.disabled = true;
-}
-function button2Click() {
-  var input = document.getElementById("input3");
-  input.disabled = false;
-}
-
-function myFunc() {
-  var input = document.getElementById("input10");
-  alert(input.value);
-}
-function myFunc2() {
-  var input = document.getElementById("input11");
-  input.value = "Ой, я поменял текст!";
-}
-function myFunc3() {
-  var input = document.getElementById("img");
-  img.src = "img/2.jpg";
-}
-
-function myFunc4(elem) {
-  alert(elem.value);
-}
-
-function myFunc5(elem) {
-  elem.value = "Ой, я поменял текст!";
-}
-
-function myFunc6(elem) {
-  elem.value = "Ой, я поменял текст!!!";
-}
-function myFunc7(elem) {
-  elem.value = "Ой, а теперь еще раз поменял!";
-}
-function myFunc8(elem) {
-  elem.value = "Ку-ку";
-}
-
-function myFunc9(elem) {
-  elem.value = "О, теперь на меня больше не нажать!";
-  elem.disabled = true;
-}
-
-function myFunc10(elem) {
-  elem.src = "img/2.jpg";
-}
-function myFunc11(elem) {
-  elem.src = "img/1.jpg";
-}
-
-function myFunc12() {
-  var elem = document.getElementById("input12");
-  elem.style.color = "red";
-  elem.style.width = "250px";
-}
-
-function myFunc13() {
-  var elem = document.getElementById("input13");
-  elem.style.display = "none";
-}
-function myFunc14() {
-  var elem = document.getElementById("input13");
-  elem.style.display = "inline-block";
-}
-
-function myFunc15() {
-  var elem = document.getElementById("input14");
-  elem.value = "Ой, я поменял свой текст и css!";
-  elem.style.color = "red";
-  elem.style.width = "250px";
-  elem.style.height = "50px";
-  elem.style.borderRadius = "20px";
-}
-
-function myFunc16() {
-  var elem = document.getElementById("input15");
-  var elem2 = document.getElementById("input16");
-  elem.disabled = true;
-  elem.value = "О, теперь на меня больше не нажать";
-  elem2.style.display = "inline-block";
-}
-
-function myFunc17() {
-  var elem = document.getElementById("input15");
-  var elem2 = document.getElementById("input16");
-  elem2.style.display = "none";
-  elem.value = "О, на меня снова можно нажимать!";
-  elem.disabled = false;
-}
-
-function myFunc18(elem) {
-  elem.value = Number(elem.value) + 1;
-}
-
-function myFunc19() {
-  var elem = document.getElementById("input17");
-  elem.style.cssFloat = "right";
-  elem.value = "Теперь я плаваю справа";
-}
-
-function myFunc20() {
-  var elem = document.getElementById("input18");
-  elem.value = "Мои css классы: " + elem.className;
-}
-
-function myFunc21() {
-  var elem3 = document.getElementById("input19");
-  var elem4 = document.getElementById("input20");
-  var elemValue3 = elem3.value;
-  var elemValue4 = elem4.value;
-  elem4.value = elemValue3;
-  elem3.value = elemValue4;
-}
-
-function myFunc22() {
-  var elem = document.getElementById("input21");
-  var elem2 = document.getElementById("input22");
-  elem2.value = elem.value * elem.value;
-}
-
-function myFunc23() {
-  var elem = document.getElementById("input23");
-  var elem2 = document.getElementById("input24");
-  if (!isNaN(elem.value)) {
-    elem2.value = elem.value * elem.value;
-  } else {
-    alert("Вы ввели не число!");
+  for (var i = 0; i < elem.length; i++) {
+    elem[i].innerHTML = i + 1 + "." + elem[i].innerHTML;
   }
-}
-
-function myFunc24(elem) {
-  elem.disabled = true;
-  elem.style.cursor = "not-allowed";
-}
-function myFunc25() {
-  var elem = document.getElementById("input25");
-  elem.value += "+";
-}
-function myFunc26() {
-  var elem = document.getElementById("input25");
-  elem.value += "-";
-}
-function myFunc27() {
-  var elem = document.getElementById("input25");
-  elem.value += "/";
-}
-function myFunc28() {
-  var elem = document.getElementById("input25");
-  elem.value += "*";
-}
-function myFunc29() {
-  var elem = document.getElementById("input25");
-  elem.value += "1";
-}
-function myFunc30() {
-  var elem = document.getElementById("input25");
-  elem.value += "2";
-}
-function myFunc31() {
-  var elem = document.getElementById("input25");
-  elem.value += "3";
-}
-function myFunc32() {
-  var elem = document.getElementById("input25");
-  elem.value += "4";
-}
-function myFunc33() {
-  var elem = document.getElementById("input25");
-  elem.value += "5";
-}
-function myFunc34() {
-  var elem = document.getElementById("input25");
-  elem.value += "6";
-}
-function myFunc35() {
-  var elem = document.getElementById("input25");
-  elem.value += "7";
-}
-function myFunc36() {
-  var elem = document.getElementById("input25");
-  elem.value += "8";
-}
-function myFunc37() {
-  var elem = document.getElementById("input25");
-  elem.value += "9";
-}
-function myFunc38() {
-  var elem = document.getElementById("input25");
-  elem.value += "0";
-}
-
-function func(calc) {
-  var text = document.getElementById("text");
-  text.value += calc;
 }
