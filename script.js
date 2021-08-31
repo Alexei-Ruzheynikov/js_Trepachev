@@ -1,182 +1,186 @@
-// function start() {
-//   window.setInterval(timer, 1000);
+// function func() {
+//   alert("!");
 // }
 
-// function timer() {
-//   var elem = document.getElementById("test");
-//   elem.value = parseInt(elem.value) + 1;
+// var elem = document.getElementById("test");
+// elem.onclick = func;
+// function func() {
+//   alert("!");
 // }
+// alert(func());
+// alert(func);
 
-// function test() {
-//   timerId = window.setInterval(timer, 1000);
-//   alert(timerId);
-// }
-// function timer() {}
-
-// function start() {
-//   window.timerId = window.setInterval(timer, 1000);
-// }
-
-// function stop() {
-//   window.clearInterval(window.timerId);
-// }
-
-// function timer() {
-//   var elem = document.getElementById("test");
-//   elem.value = parseInt(elem.value) + 1;
-// }
-
-// function start() {
-//   window.setTimeout(func, 3000);
+// var elems = document.getElementsByTagName("input");
+// for (var i = 0; i < elems.length; i++) {
+//   elems[i].onclick = func;
 // }
 // function func() {
 //   alert("!");
 // }
 
-// function timer() {
-//   var elem = document.getElementById("test");
-//   elem.value = parseInt(elem.value) + 1;
-//   window.setTimeout(timer, 1000);
+// var elems = document.getElementsByTagName("input");
+// for (var i = 0; i < elems.length; i++) {
+//   elems[i].onclick = func;
+// }
+// function func() {
+//   alert(this.value);
 // }
 
-// function timer() {
-//   var elem = document.getElementById("test");
-//   elem.value = parseInt(elem.value) + 1;
-//   if (elem.value < 10) {
-//     window.setTimeout(timer, 1000);
+// function func(elem) {
+//   alert(elem.value);
+// }
+
+// var elem = document.getElementById("test");
+// elem.addEventListener("click", func1);
+// elem.addEventListener("click", func2);
+
+// function func1() {
+//   alert("1");
+// }
+
+// function func2() {
+//   alert("2");
+// }
+
+// var elem1 = document.getElementById("test1");
+// elem1.addEventListener("click", func);
+// var elem2 = document.getElementById("test2");
+// elem2.addEventListener("click", func);
+
+// function func() {
+//   alert(this.value);
+// }
+
+// var elems = document.getElementsByTagName("input");
+// for (var i = 0; i < elems.length; i++) {
+//   elems[i].addEventListener("click", func);
+// }
+// function func() {
+//   alert(this.value);
+// }
+
+// var elem = document.getElementById("test");
+// elem.addEventListener("click", func1);
+// elem.addEventListener("click", func2);
+// elem.addEventListener("click", func3);
+
+// elem.removeEventListener("click", func1);
+// elem.removeEventListener("click", func2);
+
+// function func1() {
+//   alert("1");
+//   this.removeEventListener("click", func1);
+// }
+// function func2() {
+//   alert("2");
+//   this.removeEventListener("click", func2);
+// }
+// function func3() {
+//   alert("3");
+// }
+
+// var elems = document.getElementsByTagName("input");
+// for (var i = 0; i < elems.length; i++) {
+//   elems[i].addEventListener("click", func);
+// }
+// function func() {
+//   alert(this.value);
+//   this.removeEventListener("click", func);
+// }
+
+//Задача 1
+// var elems = document.getElementsByTagName("img");
+// for (var i = 0; i < elems.length; i++) {
+//   elems[i].onclick = func;
+// }
+// function func() {
+//   alert(this.getAttribute("src"));
+// }
+
+// Задача 2
+// var elems = document.getElementsByTagName("a");
+// for (var i = 0; i < elems.length; i++) {
+//   elems[i].addEventListener("mouseover", func);
+// }
+// function func() {
+//   this.title = this.innerHTML;
+// }
+
+// Задача 3
+// var elems = document.getElementsByTagName("a");
+// for (var i = 0; i < elems.length; i++) {
+//   elems[i].addEventListener("mouseover", func);
+// }
+// function func() {
+//   this.innerHTML = this.innerHTML + " (" + this.href + ")";
+// }
+
+// Задача 4
+// var elems = document.getElementsByTagName("a");
+// for (var i = 0; i < elems.length; i++) {
+//   elems[i].addEventListener("mouseover", func);
+// }
+// function func() {
+//   this.innerHTML = this.innerHTML + "(" + this.href + ")";
+//   this.removeEventListener("mouseover", func);
+// }
+
+// Задача 5
+// var elems = document.getElementsByTagName("input");
+// var parag = document.getElementById("test");
+// for (var i = 0; i < elems.length; i++) {
+//   elems[i].addEventListener("blur", func);
+// }
+// function func() {
+//   parag.innerHTML = this.value;
+// }
+
+// Задача 6
+// var elems = document.getElementsByTagName("input");
+// for (var i = 0; i < elems.length; i++) {
+//   elems[i].addEventListener("click", func);
+// }
+// function func() {
+//   alert(this.value);
+//   this.removeEventListener("click", func);
+// }
+
+// Задача 7
+// var elems = document.getElementsByTagName("p");
+// for (var i = 0; i < elems.length; i++) {
+//   elems[i].addEventListener("click", func);
+// }
+// function func() {
+//   this.innerHTML = this.innerHTML * this.innerHTML;
+// }
+
+// Задача 8
+// var elems = document.getElementsByTagName("input");
+// for (var i = 0; i < elems.length; i++) {
+//   elems[i].addEventListener("blur", func);
+// }
+// function func() {
+//   var correctLength = this.dataset.length;
+//   var inputDataLength = this.value.length;
+//   if (correctLength == inputDataLength) {
+//     this.style.borderColor = "green";
+//   } else {
+//     this.style.borderColor = "red";
 //   }
 // }
 
-// var texts = ["text1", "text2", "text3"];
-// var elem = document.querySelector("#elem");
-// var prev = document.querySelector("#prev");
-// var next = document.querySelector("#next");
-// слайдер текста с кнопками
-// var i = 0;
-// elem.innerHTML = texts[i];
-
-// next.addEventListener("click", function () {
-//   i++;
-//   if (i == texts.length) {
-//     i = 0;
-//   }
-//   elem.innerHTML = texts[i];
-// });
-// prev.addEventListener("click", function () {
-//   i--;
-//   if (i == -1) {
-//     i = texts.length - 1;
-//   }
-//   elem.innerHTML = texts[i];
-// });
-//
-// Таймер - каждую секунду
-// var i = 1;
-// elem.innerHTML = texts[0];
-// window.setInterval(function () {
-//   elem.innerHTML = texts[i];
-//   i++;
-//   if (i == texts.length) {
-//     i = 0;
-//   }
-// }, 1000);
-
-// var images = ["1.jpg", "2.jpg", "1.jpg", "2.jpg"];
-// var slider = document.querySelector("#slider");
-// var img = slider.querySelector("img");
-// var i = 1;
-// img.src = images[0];
-// window.setInterval(function () {
-//   img.src = images[i];
-//   i++;
-//   if (i == images.length) {
-//     i = 0;
-//   }
-// }, 1000);
-
-// function start() {
-//   window.timerId = window.setInterval(timer, 1000);
-// }
-// function stop() {
-//   window.clearInterval(window.timerId);
-// }
-// function timer() {
-//   var elem = document.getElementById("test");
-//   elem.value = parseInt(elem.value) + 1;
-// }
-
-// время на сайте
-// function go() {
-//   window.timerid = window.setInterval(timer, 1000);
-// }
-// function timer() {
-//   var clock = document.getElementById("clock");
-//   var data = new Date();
-//   clock.innerHTML =
-//     addZero(data.getHours()) +
-//     ":" +
-//     addZero(data.getMinutes()) +
-//     ":" +
-//     addZero(data.getSeconds());
-// }
-// function addZero(num) {
-//   if (num <= 9) {
-//     num = "0" + num;
-//   }
-//   return num;
-// }
-
-// function start() {
-//   window.timerId = window.setInterval(timer, 1000);
-// }
-// function timer() {
-//   var elem = document.getElementById("test");
-//   var but = document.getElementById("but");
-//   elem.value = parseInt(elem.value) - 1;
-//   if (elem.value == 0) {
-//     window.clearInterval(window.timerId);
-//     but.value = "Обратный отсчет завершен";
-//   }
-// }
-
-// var images = ["1.jpg", "2.jpg", "1.jpg", "2.jpg"];
-// var slider = document.querySelector(".slider");
-// var img = slider.querySelector("img");
-// var i = 1;
-// img.src = images[0];
-// window.setInterval(function () {
-//   img.src = images[i];
-//   i++;
-//   if (i == images.length) {
-//     i = 0;
-//   }
-// }, 1000);
-
-var text = document.querySelector("#text");
-// timer();
-setInterval(timer, 1000);
-function timer() {
-  var now = new Date();
-  var target = new Date(
-    now.getFullYear(),
-    now.getMonth(),
-    now.getDate() + 1,
-    0,
-    0,
-    0
-  );
-  var diff = Math.ceil((target - now) / 1000);
-  var hours = Math.floor(diff / (60 * 60));
-  var diff = diff % (60 * 60);
-  var minutes = Math.floor(diff / 60);
-  var diff = diff % 60;
-  var seconds = diff;
-  text.innerHTML =
-    addZero(hours) + ":" + addZero(minutes) + ":" + addZero(seconds);
+// Задача 9
+var elems = document.getElementsByTagName("div");
+for (var i = 0; i < elems.length; i++) {
+  elems[i].addEventListener("click", setRed);
 }
-function addZero(num) {
-  if (num <= 9) {
-    num = "0" + num;
-  }
-  return num;
+function setRed() {
+  this.style.background = "red";
+  this.removeEventListener("click", setRed);
+  this.addEventListener("click", setGreen);
+}
+function setGreen() {
+  this.style.background = "green";
+  this.removeEventListener("click", setGreen);
+  this.addEventListener("click", setRed);
 }
